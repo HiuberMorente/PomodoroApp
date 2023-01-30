@@ -1,13 +1,21 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: purple;
+  background-color: #ba4949;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90vh;
 }
 
 #app {
-  background-color: whitesmoke;
+  background-color: #c15c5c;
   width: 500px;
   margin: 0 auto;
-  border: solid 1px #ccc;
+  /* border: solid 1px #ccc; */
   padding: 20px;
 }
 
@@ -17,8 +25,16 @@ body {
 }
 
 #time #value {
-  font-size: 48px;
+  font-size: 90px;
   font-weight: bolder;
+  color: white;
+}
+
+#time #taskName {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+  text-transform: capitalize;
 }
 
 .form {
@@ -29,14 +45,16 @@ input[type = "text"] {
   padding: 10px;
   border: solid 1px #ccc;
   width: 300px;
+  font-size: 20px;
 }
 
 button,
 input[type = "submit"] {
   border: none;
-  background-color: #003366;
-  color: white;
+  background-color: #ffffff;
+  color: #ba4949;
   font-size: 15px;
+  font-weight: bold;
   padding: 10px;
   border-radius: 5px;
 }
@@ -52,6 +70,8 @@ input[type = "submit"] {
   display: flex;
   gap: 10px;
   align-items: center;
+  margin: 0 45px;
+  background-color: #ba4949;
 }
 
 .task .completed {
@@ -60,8 +80,17 @@ input[type = "submit"] {
   gap: 10px;
 }
 
+.task .title {
+  width: 80%;
+  padding: 5px 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
 .done {
   display: inline-block;
   padding: 5px;
-  background-color: #ccc;
+  background-color: #ffffff;
+  color: #ba4949;
+  border-radius: 15%;
 }

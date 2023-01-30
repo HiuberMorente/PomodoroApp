@@ -43,7 +43,7 @@ function renderTask(){
   });
 
   const taskContainer = document.querySelector("#tasks");
-  taskContainer.innerHTML = html.join();
+  taskContainer.innerHTML = html.join("");
 
   const startButtons = document.querySelectorAll(".task .start-button");
 
@@ -60,7 +60,7 @@ function renderTask(){
 
 function startButtonHandler(id) {
   // time = 25 * 60;
-  time = 5;
+  time = 6;
   current = id;
   const taskIndex = tasks.findIndex(task => task.id === id);
   taskName.textContent = tasks[taskIndex].title;
