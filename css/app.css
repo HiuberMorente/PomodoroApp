@@ -1,6 +1,27 @@
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; /* 1 rem = 10px */
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #ba4949;
+}
+
+.nav {
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 0px 40px 10px rgba(0, 0, 0, .1);
+  padding: 10px;
+  margin-top: 0;
+}
+
+.nav p {
+  margin: 0;
 }
 
 .container {
@@ -12,66 +33,83 @@ body {
 }
 
 #app {
-  background-color: #c15c5c;
   width: 500px;
   margin: 0 auto;
-  /* border: solid 1px #ccc; */
-  padding: 20px;
+  background-color: #c15c5c;
+  border-radius: 5%;
+  box-shadow: 5px 5px 40px 10px rgba(0,0,0,0.1), -5px -5px 40px 5px rgba(0,0,0,0.1);
 }
 
 #time {
+  width: 100%;
+  height: 50%;
   text-align: center;
-  padding: 20px 0;
 }
 
 #time #value {
-  font-size: 90px;
-  font-weight: bolder;
-  color: white;
+  font-size: 100px;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 10px;
 }
 
 #time #taskName {
   font-size: 25px;
   font-weight: bold;
-  color: white;
+  color: #ffffff;
   text-transform: capitalize;
+  padding: 20px;
+}
+
+#task-container {
+  width: 100%;
+  height: 50%;
 }
 
 .form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 }
 
-input[type = "text"] {
+input[type="text"] {
   padding: 10px;
-  border: solid 1px #ccc;
+  border: none;
   width: 300px;
   font-size: 20px;
 }
 
 button,
-input[type = "submit"] {
+input[type="submit"] {
   border: none;
   background-color: #ffffff;
   color: #ba4949;
-  font-size: 15px;
+  font-size: 18px;
   font-weight: bold;
-  padding: 10px;
-  border-radius: 5px;
+  padding: 14px 25px;
+  border-radius: 10px;
 }
+
+button,
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
 
 #tasks {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-top: 10px;
+  padding-bottom: 20px;
 }
 
 .task {
   display: flex;
   gap: 10px;
   align-items: center;
-  margin: 0 45px;
-  background-color: #ba4949;
+  margin: 5px 30px;
 }
 
 .task .completed {
@@ -83,14 +121,32 @@ input[type = "submit"] {
 .task .title {
   width: 80%;
   padding: 5px 0;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
+  text-transform: capitalize;
 }
 
 .done {
   display: inline-block;
-  padding: 5px;
+  padding: 14px 25px;
   background-color: #ffffff;
+  font-size: 18px;
+  font-weight: bold;
   color: #ba4949;
-  border-radius: 15%;
+  border-radius: 10%;
+}
+footer {
+  box-shadow: 2px 0px 40px 10px rgba(0, 0, 0, .1);
+  text-align: center;
+  padding: 1rem;  
+  margin: 0 auto;
+}
+
+footer p {
+  font-size: 2rem;
+  margin: 0;
+}
+
+footer a {
+  color: black;
 }

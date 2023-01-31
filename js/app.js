@@ -4,10 +4,17 @@ let timer = null;
 let timerBreak = null;
 let current = null;
 
+const body = document.querySelector("BODY");
+const app = document.querySelector("#app");
 const bAdd = document.querySelector("#bAdd");
 const itTask = document.querySelector("#itTask");
 const form = document.querySelector("#form");
 const taskName =  document.querySelector("#time #taskName");
+
+const primaryColorPink = "#ba4949";
+const secondaryColorPink = "#c15c5c";
+const primaryColorBlue = "#38858A" ;
+const secondaryColorBlue = "#4C9196";
 
 renderTime();
 renderTask();
@@ -87,6 +94,7 @@ function startBreak(){
   // time = 5 * 60;
   time = 5;
   taskName.textContent = "Break";
+  setColor(primaryColorBlue, secondaryColorBlue);
   renderTime();
   timerBreak = setInterval(() => {
     timerBreakHandler();
@@ -99,6 +107,7 @@ function timerBreakHandler() {
 
   if(time === 0) {
     clearInterval(timerBreak);
+    setColor(primaryColorPink, secondaryColorPink);
     current = null;
     timerBreak = null;
     taskName.textContent = "";
@@ -119,3 +128,11 @@ function markCompleted(id){
   tasks[taskIndex].completed = true;
 }
 
+function setColor(primaryColor, secondaryColor) {
+  const btnStar = document.querySelector(".done");
+    
+  body.style.backgroundColor = primaryColor;
+  app.style.backgroundColor = secondaryColor;
+  bAdd.style.color = primaryColor;
+  btnStar.style.color = primaryColor;
+}
